@@ -1,0 +1,41 @@
+{
+  "Do you like this question?": {
+    "Yes!": {
+      "__triggers__": "like",
+      "__callbacks__": "increase"
+    },
+    "Nope!": {
+      "__triggers__": "dislike",
+      "__callbacks__": "decrease"
+    },
+    "Maybe": {}
+  },
+  "Are you gonna recommend it for your friends?": {
+    "__condition__": "like",
+    "Ok...": {
+      "__callbacks__": ["increase"]
+    },
+    "Nah!": {
+      "__callbacks__": ["decrease"]
+    },
+    "Maybe": {}
+  },
+  "Why don't you like this question?": {
+    "__condition__": ["dislike"],
+    "It's shitty question!": {
+      "__callbacks__": ["decrease"]
+    },
+    "Never mind.": {}
+  },
+  "Anyway, thanks for the answer.": {
+    "__condition__": [
+      "like",
+      "dislike"
+    ],
+    "__condition_operator__": "or",
+    "F**k you!": {
+      "__callbacks__": "decrease"
+    },
+    "Ok": {}
+  }
+}

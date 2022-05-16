@@ -1,0 +1,95 @@
+
+"Король проводит спортивные состязания! Как бы Вы хотели в них поучаствовать?":
+  __condition__:
+  __condition_operator__:
+  "Я бы соревновался(-ась) в прыжках в длину!":
+    __callbacks__: sport_jumping_long
+    __triggers__:
+  "Я готов(-а) соревноваться в прыжках в высоту!":
+    __callbacks__: sport_jumping_high
+    __triggers__:
+  "Бег! Я бы однозначно пробежал(-а) марафон.":
+    __callbacks__: sport_running_marathon
+    __triggers__:
+  "Челночный бег - самое оно!":
+    __callbacks__: sport_running_shuttle
+    __triggers__:
+  "Ой, не мое это... Я бы предпочел(-ла) заняться чем-то своим.":
+    __callbacks__: sport_skip_it
+    __triggers__: own_things
+  "Пожалуй, просто понаблюдаю, интересно.":
+    __callbacks__: sport_watching
+    __triggers__:
+  "Занялся(-ась) бы ставками, дабы срубить бабла!":
+    __callbacks__: sport_betting
+    __triggers__:
+  "Попробую выдвинуть совего кандидата!":
+    __callbacks__: sport_managing
+    __triggers__:
+
+"Вы совершаете путешествие с небольшой группой спутников и остонавливаетесь на ночлег. Чем бы заняться в лагере?":
+  __condition__:
+  __condition_operator__:
+  "Я буду дозорным(-ой)!":
+    __callbacks__: camping_patrol
+    __triggers__: patrol
+  "Поохочусь, добуду какой-нибудь еды.":
+    __callbacks__: camping_hunting
+    __triggers__:
+  "Я буду рассказывать истории у костра! Возможно, спою песню...":
+    __callbacks__: camping_storytelling
+    __triggers__:
+  "Приготовлю еду, помогу развести костер, возвести палатки...":
+    __callbacks__: camping_camping
+    __triggers__:
+  "Будучи опытным(-ой) в этом деле, дам пару советов, расскажу, как лучше делать, возможно, помогу в бытовых делах.":
+    __callbacks__: camping_managing
+    __triggers__:
+  "Помогу разбить лагерь и займусь чем-то своим.":
+    __callbacks__: camping_managing
+    __triggers__: own_things
+
+"Чем Вы занимаетесь в свободное время?":
+  __condition__:
+    - own_things
+  __condition_operator__:
+  "Физическими упражнениями.":
+    __callbacks__: own_things_physical
+    __triggers__:
+  "Читаю, изучаю что-то новое для себя.":
+    __callbacks__: own_things_learning
+    __triggers__:
+  "Играю во что-нибудь, люблю игры.":
+    __callbacks__: own_things_playing
+    __triggers__:
+  "Провожу время с друзьями; беседуем, общаемся.":
+    __callbacks__: own_things_discussing
+    __triggers__:
+  "Какое свободное время? Я \"занятой человек\"!":
+    __callbacks__: own_things_busy
+    __triggers__:
+  "Медитирую, расслабляюсь.":
+    __callbacks__: own_things_meditation
+    __triggers__:
+  "Гуляю на природе.":
+    __callbacks__: own_things_meditation
+    __triggers__:
+  "Играю на музыкальных инструментах/пою песни/пишу стихи или рассказы/рисую.":
+    __callbacks__: own_things_art
+    __triggers__:
+  "Да, по-разному.":
+    __callbacks__: own_things_mixed
+    __triggers__:
+  "Ничего?!":
+    __callbacks__: own_things_nothing
+    __triggers__:
+  "Не твое дело!":
+    __callbacks__: own_things_not_your_business
+    __triggers__:
+
+#"Вопрос":
+#  __condition__:
+#  __condition_operator__:
+#  "Вариант":
+#    __callbacks__:
+#    __triggers__:
